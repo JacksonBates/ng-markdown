@@ -1,0 +1,10 @@
+<div class="container">
+    <h1 class='text-center'>{{title}}</h1>
+    <div class='row'>
+        <div class='col-xs-12 col-sm-6'>
+            <h2 class="textarea-heading">Write your Markdown below</h2>
+            <textarea [(ngModel)]="markdown.raw" placeholder="Enter markdown here..."></textarea>
+        </div>
+        <div class='col-xs-12 col-sm-6 output-area' [innerHTML]="markdown.raw | markdown" ></div>
+    </div>
+</div>
